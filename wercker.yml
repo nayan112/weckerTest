@@ -1,4 +1,3 @@
-box: node
 box: microsoft/dotnet:2.0-sdk
 no-response-timeout: 10
 build:
