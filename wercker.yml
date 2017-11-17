@@ -1,4 +1,4 @@
-box: microsoft/dotnet
+box: microsoft/aspnetcore
 no-response-timeout: 10
 build:
   steps: 
