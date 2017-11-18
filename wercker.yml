@@ -4,22 +4,42 @@ build:
   steps:
     - script:
         name: npm restore
+        cwd: src/Wercker.TeamService
         code: |
           npm install 
     - script:
         name: core restore
+        cwd: src/Wercker.TeamService
         code: |
           dotnet restore
     - script:
         name: build
+        cwd: src/Wercker.TeamService
         code: |
           dotnet build
     - script:
         name: publish
+        cwd: src/Wercker.TeamService
         code: |
           dotnet publish -o publish  
     - script:
+        name: test-restore
+        cwd: test/Wercker.TeamService.Tests
+        code: |
+           dotnet restore      
+    - script:
+        name: test-build
+        cwd: test/Wercker.TeamService.Tests
+        code: |
+           dotnet build
+    - script:
+        name: test-run
+        cwd: test/Wercker.TeamService.Tests
+        code: |
+           dotnet run                          
+    - script:
         name: copy binary
+        cwd: src/Wercker.TeamService
         code: |
           cp -r . $WERCKER_OUTPUT_DIR/app 
           cd $WERCKER_OUTPUT_DIR/app
