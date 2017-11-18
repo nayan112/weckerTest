@@ -63,6 +63,6 @@ deploy:
     - internal/docker-push:
         username: $USERNAME
         password: $PASSWORD
-        repository: dotnetcoreservices/hello-world
+        repository: nayan112/WerckerTeamService
         registry: https://registry.hub.docker.com
         entrypoint: "/pipeline/source/app/docker_entrypoint.sh"
