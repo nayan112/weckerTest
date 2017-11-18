@@ -57,7 +57,6 @@ build:
         cwd: src/Wercker.TeamService
         code: |
           cp -r . $WERCKER_OUTPUT_DIR/app 
-          cd $WERCKER_OUTPUT_DIR/app
 deploy:
   steps:
     - internal/docker-push:
