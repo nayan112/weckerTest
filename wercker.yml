@@ -64,7 +64,7 @@ deploy:
         username: $USERNAME
         password: $PASSWORD
         entrypoint: "/pipeline/source/app/docker_entrypoint.sh"
-        repository: nayan112/Wercker.TeamService
+        repository: nayan112/werckerteamservice
         tag: my-amazing-tag
         registry: https://registry.hub.docker.com
         
