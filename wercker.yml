@@ -63,7 +63,8 @@ deploy:
     - internal/docker-push:
         username: $USERNAME
         password: $PASSWORD
+        entrypoint: "/pipeline/source/app/docker_entrypoint.sh"
         repository: nayan112/Wercker.TeamService
         tag: my-amazing-tag
         registry: https://registry.hub.docker.com
-        entrypoint: "/pipeline/source/app/docker_entrypoint.sh"
+        
