@@ -3,11 +3,11 @@ no-response-timeout: 10
 build:
   steps:
     - script:
-        name: restore
+        name: npm restore
         code: |
           npm install 
     - script:
-        name: restore
+        name: core restore
         code: |
           dotnet restore
     - script:
