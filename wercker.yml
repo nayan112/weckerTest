@@ -36,8 +36,23 @@ build:
         name: test-run
         cwd: test/Wercker.TeamService.Tests
         code: |
-           dotnet run                          
+           dotnet test                          
     - script:
+        name: integrationtest-restore
+        cwd: test/Wercker.TeamService.IntegrationTests
+        code: |
+           dotnet restore      
+    - script:
+        name: integrationtest-build
+        cwd: test/Wercker.TeamService.IntegrationTests
+        code: |
+           dotnet build
+    - script:
+        name: integrationtest-run
+        cwd: test/Wercker.TeamService.IntegrationTests
+        code: |
+           dotnet test
+	- script:
         name: copy binary
         cwd: src/Wercker.TeamService
         code: |

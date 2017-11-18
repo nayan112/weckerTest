@@ -5,13 +5,10 @@ using Wercker.TeamService.Persistence;
 
 namespace Wercker.TeamService.Controller
 {
+    [Route("[controller]")]
     public class TeamController: Microsoft.AspNetCore.Mvc.Controller
     {
         readonly ITeamRepository _repository;
-        public TeamController()
-        {
-            
-        }
         public TeamController(ITeamRepository repo)
         {
             _repository = repo;
