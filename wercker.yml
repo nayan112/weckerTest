@@ -65,5 +65,5 @@ deploy:
         entrypoint: "/pipeline/source/app/docker_entrypoint.sh"
         repository: nayan112/werckerteamservice
         tag: my-amazing-tag
-        registry: https://registry.hub.docker.com
+        registry: https://registry.hub.docker.com/v2
         
