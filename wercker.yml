@@ -52,7 +52,7 @@ build:
         cwd: test/Wercker.TeamService.IntegrationTests
         code: |
            dotnet test
-	- script:
+    - script:
         name: copy binary
         cwd: src/Wercker.TeamService
         code: |
