@@ -56,11 +56,12 @@ build:
         name: copy binary
         cwd: src/Wercker.TeamService
         code: |
-          cp -r . $WERCKER_OUTPUT_DIR/app 
+          cp -r . $WERCKER_OUTPUT_DIR
+          cd $WERCKER_OUTPUT_DIR
 deploy:
   steps:
     - internal/docker-push:
-        cwd: $WERCKER_OUTPUT_DIR/app
+        cwd: $WERCKER_OUTPUT_DIR
         username: $USERNAME
         password: $PASSWORD
         repository: nayan112/werckerteamservice
