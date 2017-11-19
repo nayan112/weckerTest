@@ -60,7 +60,7 @@ build:
 deploy:
   steps:
     - internal/docker-push:
-        code: echo "hello world!"
+        cwd: $WERCKER_OUTPUT_DIR/app
         username: $USERNAME
         password: $PASSWORD
         repository: nayan112/werckerteamservice
