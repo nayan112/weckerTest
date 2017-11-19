@@ -59,10 +59,9 @@ build:
           cp -r . $WERCKER_OUTPUT_DIR/app 
 deploy:
   steps:
-    - internal/docker-scratch-push:
+    - internal/docker-push:
         username: $USERNAME
         password: $PASSWORD
         repository: nayan112/werckerteamservice
-        tag: my-amazing-tag
         registry: https://registry.hub.docker.com/v2
         entrypoint: "/pipeline/source/app/docker_entrypoint.sh"        
