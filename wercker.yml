@@ -59,7 +59,7 @@ build:
           cp -r . $WERCKER_OUTPUT_DIR/app 
 deploy:
   steps:
-    - internal/docker-push:
+    - internal/docker-scratch-push:
         username: $USERNAME
         password: $PASSWORD
         repository: nayan112/werckerteamservice
