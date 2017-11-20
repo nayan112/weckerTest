@@ -13,6 +13,6 @@ compile:
 
 test:
   override:
-    - echo ls
+    - ls
     - dotnet test test\Wercker.TeamService.IntegrationTests
     - dotnet test test\Wercker.TeamService.Tests
