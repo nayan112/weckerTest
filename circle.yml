@@ -7,10 +7,18 @@ machine:
     - sudo apt-get install dotnet-sdk-2.0.2
 compile: 
   override:
+    - cd src/Wercker.TeamService
     - dotnet restore
     - dotnet build    
     - dotnet publish -o publish
 
 test:
   override:
-    - dotnet run
+    - cd test/Wercker.TeamService.Tests
+    - dotnet restore
+    - dotnet build    
+    - dotnet test
+    - cd test/Wercker.TeamService.IntegrationTests
+    - dotnet restore
+    - dotnet build    
+    - dotnet test
