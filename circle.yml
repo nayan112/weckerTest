@@ -13,6 +13,5 @@ compile:
 
 test:
   override:
-    - ls
-    - dotnet test weckerTest/test/Wercker.TeamService.IntegrationTests/Wercker.TeamService.IntegrationTests.csproj
-    - dotnet test weckerTest/test/Wercker.TeamService.Tests/Wercker.TeamService.Tests.csproj
+    - dotnet test test/Wercker.TeamService.IntegrationTests/Wercker.TeamService.IntegrationTests.csproj
+    - dotnet test test/Wercker.TeamService.Tests/Wercker.TeamService.Tests.csproj
