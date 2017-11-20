@@ -13,4 +13,4 @@ compile:
 
 test:
   override:
-    - echo "no tests"
+    - dotnet run
