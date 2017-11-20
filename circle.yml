@@ -14,5 +14,5 @@ compile:
 test:
   override:
     - ls
-    - dotnet test test\Wercker.TeamService.IntegrationTests
-    - dotnet test test\Wercker.TeamService.Tests
+    - dotnet test \test\Wercker.TeamService.IntegrationTests
+    - dotnet test \test\Wercker.TeamService.Tests
