@@ -63,7 +63,8 @@ deploy:
       - npm-install
       - script:
         name: install supervisor
-        code: npm install -g supervisor
+        code: |
+            npm install -g supervisor
     - internal/docker-push:
         cwd: $WERCKER_OUTPUT_DIR
         username: $USERNAME
