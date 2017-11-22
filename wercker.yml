@@ -60,16 +60,9 @@ build:
           cd $WERCKER_OUTPUT_DIR
 deploy:
   steps:
-      - npm-install
-      - script:
-        name: install supervisor
-        code: |
-            npm install -g supervisor
     - internal/docker-push:
-        cwd: $WERCKER_OUTPUT_DIR
+        registry: https://registry.hub.docker.com/v2
         username: $USERNAME
         password: $PASSWORD
         repository: nayan112/werckerteamservice
-        port:"5000"
-        registry: https://registry.hub.docker.com/v2
-        cmd: /bin/bash -c
+        working-dir: $WERCKER_OOUTPUT_DIR
