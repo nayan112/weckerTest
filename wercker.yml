@@ -61,8 +61,9 @@ build:
 deploy:
   steps:
     - internal/docker-push:
-        registry: https://registry.hub.docker.com/v2
         username: $USERNAME
         password: $PASSWORD
-        repository: nayan112/werckerteamservice
+        tag: firstRun
+        repository: quay.io/nayan112/werckerteamservice
+        registry: https://quay.io
         working-dir: $WERCKER_OOUTPUT_DIR
