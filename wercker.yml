@@ -61,7 +61,6 @@ build:
 deploy:
   steps:
     - internal/docker-push:
-        cwd: $WERCKER_OUTPUT_DIR
         username: $USERNAME
         password: $PASSWORD
         repository: nayan112/werckerteamservice
