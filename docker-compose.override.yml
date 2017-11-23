@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  wercker.teamservice:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"

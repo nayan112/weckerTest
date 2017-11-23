@@ -19,5 +19,4 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker login -p $DOCKER_PASS -u $DOCKER_USER 
       - docker push nayan112/weckerTest
