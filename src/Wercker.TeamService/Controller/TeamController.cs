@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Wercker.TeamService.Models;
@@ -5,13 +6,18 @@ using Wercker.TeamService.Persistence;
 
 namespace Wercker.TeamService.Controller
 {
-    [Route("[controller]")]
     public class TeamController: Microsoft.AspNetCore.Mvc.Controller
     {
         readonly ITeamRepository _repository;
         public TeamController(ITeamRepository repo)
         {
             _repository = repo;
+        }
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return Ok(Guid.NewGuid());
         }
 
         [HttpGet]

@@ -27,7 +27,12 @@ namespace Wercker.TeamService
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app)
         {
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Team}/{action=Index}");
+            });
         }
     }
 }
