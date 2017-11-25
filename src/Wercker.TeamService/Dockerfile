@@ -17,7 +17,7 @@ RUN dotnet publish -c Release -o ./obj/Docker/publish
 
 EXPOSE 80
 #make sure obj/Docker/publish folder exists in side d project
-COPY ${source:-obj/Docker/publish} .
+COPY ${source:-app/obj/Docker/publish} .
 
 
 ENTRYPOINT ["dotnet", "Wercker.TeamService.dll"]
