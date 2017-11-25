@@ -63,5 +63,7 @@ deploy:
     - internal/docker-push:
         username: $USERNAME
         password: $PASSWORD
+        tag: latest
+        ports:80
         repository: nayan112/werckerteamservice
         registry: https://registry.hub.docker.com/v2

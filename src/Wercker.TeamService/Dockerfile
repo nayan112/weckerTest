@@ -1,4 +1,4 @@
-#any other version throws sdk command error
+#any other version throws sdk command error #dont miss the env name, it will be used to form final container
 FROM microsoft/aspnetcore-build:2.0 as build-env
 
 ARG source
@@ -15,12 +15,11 @@ RUN dotnet build
 
 RUN dotnet publish -c Release -o out
 
-FROM microsoft/aspnetcore-build:2.0
+FROM microsoft/aspnetcore:2.0
 WORKDIR /app
 
 EXPOSE 80
 #make sure obj/Docker/publish folder exists in side d project
 COPY --from=build-env /app/out .
-
 
 ENTRYPOINT ["dotnet", "Wercker.TeamService.dll"]
