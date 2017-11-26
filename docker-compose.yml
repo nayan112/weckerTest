@@ -6,3 +6,9 @@ services:
     build:
       context: ./src/Wercker.TeamService
       dockerfile: Dockerfile
+
+  wercker.web:
+    image: wercker.web
+    build:
+      context: ./src/Wercker.Web
+      dockerfile: Dockerfile

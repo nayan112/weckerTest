@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{55FA5DD0-8050-40D0-9312-BA148438A453}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wercker.Web", "src\Wercker.Web\Wercker.Web.csproj", "{32BB7036-7E2A-4C60-AC02-7C7E6DE4AD35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{55FA5DD0-8050-40D0-9312-BA148438A453}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55FA5DD0-8050-40D0-9312-BA148438A453}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55FA5DD0-8050-40D0-9312-BA148438A453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BB7036-7E2A-4C60-AC02-7C7E6DE4AD35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BB7036-7E2A-4C60-AC02-7C7E6DE4AD35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BB7036-7E2A-4C60-AC02-7C7E6DE4AD35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BB7036-7E2A-4C60-AC02-7C7E6DE4AD35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 		{29D282D4-7D10-4C4D-BB70-CBA2774D2776} = {0289C042-55F0-424E-8016-06976F8B2EF9}
 		{E4AD8BAC-EA00-41FF-A51A-334E68AA6FC5} = {B3017005-4E93-4590-9273-C65E784E2C5A}
 		{CD7D51B7-E7B8-421D-B774-6D807457FB04} = {B3017005-4E93-4590-9273-C65E784E2C5A}
+		{32BB7036-7E2A-4C60-AC02-7C7E6DE4AD35} = {0289C042-55F0-424E-8016-06976F8B2EF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0B15D43-6CBE-45D0-B6B0-08E299249223}
